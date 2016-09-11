@@ -1,0 +1,40 @@
+.slipker_wraper {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #dddddd;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: 1s all cubic-bezier(1, 0, 0, 1);
+		width: 150%;
+	}
+	li {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		transition: 1s all cubic-bezier(1, 0, 0, 1);
+		opacity: 0;
+		visibility: hidden;
+		&.active {
+			transition: 1s all cubic-bezier(1, 0, 0, 1);
+			visibility: visible;
+			opacity: 1;
+			img {
+				transition: 1s all cubic-bezier(1, 0, 0, 1);
+				width: 100%;
+			}
+		}
+	}
+}
